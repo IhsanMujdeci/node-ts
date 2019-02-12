@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm test",
     "tsc": "tsc",
-    "ts-watch" : "tsc --watch",
+    "tsc-watch" : "tsc --watch",
     "tsc-init":  "tsc -- --init"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
