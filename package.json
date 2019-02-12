@@ -6,12 +6,13 @@
   "scripts": {
     "test": "npm test",
     "tsc": "tsc",
-    "tsc-watch" : "tsc --watch",
-    "tsc-init":  "tsc -- --init"
+    "tsc-watch": "tsc --watch",
+    "tsc-init": "tsc -- --init"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^11.9.0",
     "typescript": "^3.3.3"
   }
 }
