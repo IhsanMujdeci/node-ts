@@ -1,0 +1,17 @@
+{
+  "name": "node-ts",
+  "version": "1.0.0",
+  "description": "A simple starter for ts with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "tsc": "tsc",
+    "ts-watch" : "tsc --watch",
+    "tsc-init":  "tsc -- --init"
+  },
+  "author": "Ihsan aka, lvcid aka yung apriori",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.3.3"
+  }
+}
