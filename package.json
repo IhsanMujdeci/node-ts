@@ -7,7 +7,7 @@
     "test": "npm test",
     "tsc": "tsc",
     "build": "tsc",
-    "run": "tsc --watch",
+    "start": "tsc --watch",
     "init": "tsc -- --init"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
