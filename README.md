@@ -2,9 +2,9 @@
 Node Typescript starter with testing
 
 ## Features
-- Dev mode with nodemon like re-running
-- Testing built in with jest
-- Environment variable loading from file built in
+- Dev mode transpiling ts with nodemon like re-running.
+- Testing built in with jest.
+- Environment variable loading from file built in.
 
 ## How to use
 `npm install`  
@@ -13,8 +13,7 @@ Node Typescript starter with testing
 ## Commands
 
 ### npm start
-Dev mode <br>
-Starts and watches the project for changes and compiles ts and restarts process
+Load environment variables from `.env` and build ts code, watch for code changes and rebuilds ts to js and loads node again.
 
 ### npm run test
 Runs test with ts-jest
