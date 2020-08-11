@@ -12,8 +12,8 @@ Typescript node starter with testing
 Runs test with ts-jest
 
 ### npm run
-Basically a dev mode
+Dev mode <br>
 Starts and watches the project for changes and compiles ts and restarts process
 
 ### npm build
-Build the ts into js into the "./build" folder
+Build ts `./src` into js `./build` folder
