@@ -1,4 +1,4 @@
-import {add} from "./index";
+import {add} from "@myApp/index";
 
 describe("Index test", ()=>{
     it("Should be able to add 1 and 1", ()=>{
