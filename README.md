@@ -1,19 +1,18 @@
-# NODE-TS Starter
-Typescript node starter with testing
+# Node Typescript Starter
+Node Typescript starter with testing
 
 ## How to use
-
 `npm install`  
-`npm run` 
+`npm start` 
 
 ## Commands
-
-### npm test
-Runs test with ts-jest
 
 ### npm start
 Dev mode <br>
 Starts and watches the project for changes and compiles ts and restarts process
 
-### npm build
+### npm run test
+Runs test with ts-jest
+
+### npm run build
 Build ts `./src` into js `./build` folder
