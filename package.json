@@ -4,16 +4,19 @@
   "description": "A simple starter for ts with node",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "tsc": "tsc",
+    "test": "jest",
     "build": "tsc",
-    "start": "tsc --watch",
-    "init": "tsc -- --init"
+    "start": "tsc --watch"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "@types/jest": "^26.0.9",
+    "jest": "^26.3.0",
+    "ts-jest": "^26.1.4",
+    "ts-node-dev": "^1.0.0-pre.56",
     "@types/node": "^11.9.0",
     "typescript": "^3.3.3"
-  }
+  },
+  "dependencies": {}
 }

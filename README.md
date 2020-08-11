@@ -1,25 +1,19 @@
 # NODE-TS Starter
-Acts as a basic foundation to do ts work.
+Typescript node starter with testing
 
 ## How to use
 
 `npm install`  
-`npm run tsc-watch` 
+`npm run` 
 
 ## Commands
 
 ### npm test
-Unimplemented, doesn't work
+Runs test with ts-jest
 
-### npm run tsc
-Acts as alias to tsc package.  
-Can be used for transpiling only once.
+### npm run
+Basically a dev mode
+Starts and watches the project for changes and compiles ts and restarts process
 
-### npm run tsc-watch
-Watch all files recursively if they need to be translipled.
-Very handy for general use.
-
-### npm run tsc-init
-Use to generate tsconfig.json in root.  
-Does not ever need to be run.  
-Left here as a reference.
+### npm build
+Build the ts into js into the "./build" folder
