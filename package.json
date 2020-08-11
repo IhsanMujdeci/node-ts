@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start": "tsc --watch"
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
