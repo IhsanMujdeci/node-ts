@@ -19,7 +19,6 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "dotenv-cli": "^2.0.0"
+    "dotenv": "^8.0.0"
   }
 }
