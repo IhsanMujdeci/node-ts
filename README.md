@@ -6,7 +6,7 @@ Node Typescript starter with testing
 - Testing built in with jest.
 - Github actions on push and pr to master that build and test the application
 - Environment variable loading from file built in.
-- Aliases your project under @myApp, you can change it int he tsconfig.json
+- Aliases your project under @myApp, you can change it the tsconfig.json
 
 ## How to use
 `npm install`  
