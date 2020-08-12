@@ -5,6 +5,7 @@ Node Typescript starter with testing
 - Dev mode transpiling ts with nodemon like re-running.
 - Testing built in with jest.
 - Environment variable loading from file built in.
+- Aliases your project under @myApp, you can change it int he tsconfig.json
 
 ## How to use
 `npm install`  
