@@ -1,4 +1,3 @@
-// change aliases via the tsconfig.json compilerOptions.paths
 import {add} from "@myApp/index";
 
 describe("Index test", ()=>{

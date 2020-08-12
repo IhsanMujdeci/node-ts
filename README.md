@@ -4,6 +4,7 @@ Node Typescript starter with testing
 ## Features
 - Dev mode transpiling ts with nodemon like re-running.
 - Testing built in with jest.
+- Github actions on push and pr to master that build and test the application
 - Environment variable loading from file built in.
 - Aliases your project under @myApp, you can change it int he tsconfig.json
 
