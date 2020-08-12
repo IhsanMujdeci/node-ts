@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "start": "ts-node-dev -r ./env.load.js --respawn --transpile-only src/index.ts"
+    "start": "ts-node-dev -r tsconfig-paths/register -r ./env.load.js --respawn --transpile-only src/index.ts"
+
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "tsconfig-paths": "^3.9.0"
   }
 }
