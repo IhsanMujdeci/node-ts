@@ -8,6 +8,7 @@
     "baseUrl": ".",
     "paths": {
       "@myApp/*" : ["src/*"]
-    }
+    },
+    "plugins": [{ "transform": "typescript-transform-paths" }]
   }
 }
