@@ -24,6 +24,7 @@
     "dotenv": "^8.0.0",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
-    "ttypescript": "^1.5.10"
+    "ttypescript": "^1.5.10",
+    "typescript-transform-paths": "^2.2.4"
   }
 }
