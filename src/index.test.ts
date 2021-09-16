@@ -5,6 +5,7 @@ describe("Index test", () => {
     expect(add(1, 1)).toEqual(2);
   });
 
+
   it("Should load environment variable", () => {
     expect(process.env.HELLO).toEqual("world");
   });
