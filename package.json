@@ -10,7 +10,6 @@
     "prettier": "pretty-quick",
     "prepare": "husky install"
   },
-
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
   "devDependencies": {
