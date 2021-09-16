@@ -8,5 +8,6 @@ function startServer(port: string) {
     app.listen(port, () => {
       console.log(`Example app listening at http://localhost:${port}`);
     });
+
   });
 }
