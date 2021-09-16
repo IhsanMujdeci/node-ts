@@ -6,7 +6,9 @@ function startServer(port: string) {
   return new Promise((resolve, reject) => {
     app.on;
     app.listen(port, () => {
+      resolve()
       console.log(`Example app listening at http://localhost:${port}`);
-    });
+    })
+        .on('error', reject)
   });
 }
