@@ -10,11 +10,7 @@
     "prettier": "pretty-quick",
     "prepare": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
+
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
   "devDependencies": {
