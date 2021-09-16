@@ -1,6 +1,7 @@
-const hello = process.env.HELLO;
-console.log("hello", hello);
+import {startServer} from "@app/servid/rest";
 
-export function add(a: number, b: number) {
-  return a + b;
+const port = parseInt(process.env.PORT ?? '')
+if(isNaN(port)){
+  throw new Error('Port supplied is nan')
 }
+startServer(port)

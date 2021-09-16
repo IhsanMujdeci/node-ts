@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "ttsc",
     "start": "ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
-    "prettier": "pretty-quick",
+    "prettier": "prettier --write .",
     "prepare": "husky install"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",

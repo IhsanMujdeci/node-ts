@@ -1,14 +1,15 @@
-import express from "express";
+import * as express from "express";
 
-function startServer(port: string) {
+export function startServer(port: number): Promise<express.Application> {
   const app = express();
 
   return new Promise((resolve, reject) => {
     app.on;
-    app.listen(port, () => {
-      resolve()
-      console.log(`Example app listening at http://localhost:${port}`);
-    })
-        .on('error', reject)
+    app
+      .listen(port, () => {
+        console.log(`Server listening at http://localhost:${port}`);
+        resolve(app);
+      })
+      .on("error", reject);
   });
 }

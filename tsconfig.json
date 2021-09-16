@@ -8,8 +8,14 @@
     "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@myApp/*": ["src/*"]
+      "@app/*": ["src/*"]
     },
-    "plugins": [{ "transform": "typescript-transform-paths" }]
+    "plugins": [{ "transform": "typescript-transform-paths" }],
+    "lib": [
+      "dom",
+      "es5",
+      "scripthost",
+      "es2015.promise"
+    ]
   }
 }
