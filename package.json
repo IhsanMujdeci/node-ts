@@ -9,6 +9,11 @@
     "start": "ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "prettier": "pretty-quick"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
   "devDependencies": {
@@ -25,6 +30,7 @@
     "@types/express": "^4.17.13",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "husky": "^7.0.2",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.10",
