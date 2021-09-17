@@ -1,10 +1,12 @@
+import { Identifyable } from "@app/entity/identify";
+
 export type UserEntityDTO = {
   id: string;
   name: string;
   interests: string[];
 };
 
-class UserEntity {
+export class UserEntity implements Identifyable {
   constructor(
     public id: string,
     public name: string,
@@ -13,6 +15,10 @@ class UserEntity {
 
   static fromDTO(dto: UserEntityDTO) {
     return new UserEntity(dto.id, dto.name, dto.interests);
+  }
+
+  getPrimaryKey(): string {
+    return this.id;
   }
 
   toDTO(): UserEntityDTO {

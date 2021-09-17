@@ -4,9 +4,9 @@
   "description": "A simple starter for ts with node",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "DOTENV_CONFIG_PATH=.test.env jest",
     "build": "ttsc",
-    "start": "ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
+    "start": "DOTENV_CONFIG_PATH='./.env' ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "prettier": "pretty-quick --staged",
     "prepare": "husky install"
   },
@@ -24,13 +24,20 @@
     "husky": "^7.0.0"
   },
   "dependencies": {
+    "@types/diff": "^5.0.1",
     "@types/express": "^4.17.13",
+    "@types/uuid": "^8.3.1",
+    "diff": "^5.0.0",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "husky": "^7.0.2",
+    "mongodb": "^4.1.2",
+    "text-file-diff": "^1.4.6",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.10",
-    "typescript-transform-paths": "^2.2.4"
+    "typescript-transform-paths": "^2.2.4",
+    "uuid": "^8.3.2",
+    "uuid-mongodb": "^2.4.4"
   }
 }
