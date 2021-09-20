@@ -1,6 +1,7 @@
-const hello = process.env.HELLO;
-console.log('hello', hello);
+import { print } from "@myApp/imported";
 
-export function add(a: number, b: number){
-    return a+b
+export function add(a: number, b: number) {
+  return a + b;
 }
+
+print();

@@ -4,17 +4,18 @@
   "description": "A simple starter for ts with node",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "DOTENV_CONFIG_PATH=.test.env jest",
     "build": "ttsc",
-    "start": "ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
-    "start:prod1": "node -r ts-node/register -r tsconfig-paths/register build/index.js",
-    "start:prod": "node build/index.js"
+    "start:dev": "DOTENV_CONFIG_PATH=.env ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
+    "prepare": "husky install",
+    "prettier": "pretty-quick --staged"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.9",
     "@types/node": "^11.9.0",
+    "husky": "^7.0.2",
     "jest": "^26.3.0",
     "ts-jest": "^26.1.4",
     "ts-node-dev": "^1.1.8",
@@ -22,6 +23,8 @@
   },
   "dependencies": {
     "dotenv": "^8.0.0",
+    "prettier": "^2.4.1",
+    "pretty-quick": "^3.1.1",
     "ts-node": "^8.10.2",
     "tsconfig-paths": "^3.9.0",
     "ttypescript": "^1.5.10",
