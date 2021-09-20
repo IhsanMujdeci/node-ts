@@ -15,11 +15,12 @@ Node Typescript starter with testing
 ## How to use
 
 `npm install`  
+`npm run prepare`
 `npm start:dev`
 
 ## Commands
 
-### npm start
+### npm run start:dev
 
 Load environment variables from `.env` and build ts code, watch for code changes and rebuilds ts to js and respawns node.
 

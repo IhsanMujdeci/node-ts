@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "DOTENV_CONFIG_PATH=.test.env jest",
-    "build": "ttsc",
+    "build": "tsc",
     "start:dev": "DOTENV_CONFIG_PATH=.env ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
-    "prepare": "husky install",
+    "prepare": "ts-patch install -s && husky install",
     "prettier": "pretty-quick --staged"
   },
   "author": "Ihsan aka, lvcid aka yung apriori",
@@ -19,6 +19,7 @@
     "jest": "^27.2.0",
     "ts-jest": "^27.0.5",
     "ts-node-dev": "^1.1.8",
+    "ts-patch": "^1.4.4",
     "typescript": "^4.4.3"
   },
   "dependencies": {
@@ -26,7 +27,6 @@
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
     "tsconfig-paths": "^3.11.0",
-    "ttypescript": "^1.5.12",
     "typescript-transform-paths": "^3.3.1",
     "yargs": "^17.1.1"
   }
