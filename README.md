@@ -15,7 +15,7 @@ Node Typescript starter with testing
 ## How to use
 
 `npm install`  
-`npm run prepare`
+`npm run prepare`  
 `npm start:dev`
 
 ## Commands
