@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "DOTENV_CONFIG_PATH=.test.env jest",
+    "test:watch": "npm test -- --watch",
     "build": "tsc",
     "start:dev": "DOTENV_CONFIG_PATH=.env ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "prepare": "ts-patch install -s && husky install",
@@ -20,7 +21,8 @@
     "ts-jest": "^27.0.5",
     "ts-node-dev": "^1.1.8",
     "ts-patch": "^1.4.4",
-    "typescript": "^4.4.3"
+    "typescript": "^4.4.3",
+    "jest-watch-typeahead": "^1.0.0"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

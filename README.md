@@ -24,9 +24,13 @@ Node Typescript starter with testing
 
 Load environment variables from `.env` and build ts code, watch for code changes and rebuilds ts to js and respawns node.
 
-### npm run test
+### npm test
 
 Runs test with ts-jest
+
+### npm run test:watch
+
+Runs test with ts-jest watch interactive command
 
 ### npm run build
 
