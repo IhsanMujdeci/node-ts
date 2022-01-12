@@ -12,6 +12,10 @@ Node Typescript starter with testing
 - Husky runs prettier on commit
 - bin folder contains cli tool to start server application when implemented
 
+## Dependencies
+
+Node version at least latest 14
+
 ## How to use
 
 `npm install`  
