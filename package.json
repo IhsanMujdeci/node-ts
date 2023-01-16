@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.7",
+    "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-typescript": "^7.16.7",
     "@trivago/prettier-plugin-sort-imports": "^3.2.0",
