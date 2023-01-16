@@ -6,7 +6,7 @@
   "scripts": {
     "test": "DOTENV_CONFIG_PATH=.test.env jest",
     "test:watch": "npm test -- --watch",
-    "build": "yarn babel --extensions '.ts' src --out-dir build",
+    "build": "babel --extensions '.ts' src --out-dir build",
     "start:dev": "DOTENV_CONFIG_PATH=.env ts-node-dev -r ./env.load.js -r tsconfig-paths/register --respawn --transpile-only src/index.ts",
     "prepare": "husky install",
     "prettier": "pretty-quick --staged"
