@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node build/index.js",
-    "start:dev": "node -r @swc-node/register src/index.ts",
+    "start:dev": "nodemon -r @swc-node/register -r tsconfig-paths/register ./src/index.ts",
     "build": "ttsc --build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
@@ -29,10 +29,13 @@
     "jest-watch-typeahead": "^1.0.0",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.1",
+    "tsconfig-paths": "^4.1.2",
     "ttypescript": "^1.5.15",
     "typescript": "^4.4.3"
   },
   "dependencies": {
-    "@swc-node/register": "^1.6.2"
+    "@swc-node/register": "^1.6.2",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
   }
 }
