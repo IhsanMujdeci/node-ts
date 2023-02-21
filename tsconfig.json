@@ -9,7 +9,13 @@
     "paths": {
       "@app/*": ["src/*"]
     },
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
