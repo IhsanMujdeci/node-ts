@@ -5,8 +5,10 @@ Node Typescript starter with testing
 ## Features
 
 - Testing built in with jest.
-- Aliases your project under @myApp, you can change it the tsconfig.json
-- Husky runs prettier on commit
+- Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`.
+- Husky runs prettier on commit, type checking on push.
+- Prettier sorts imports on top of the file by name, config can ba found in `.prettierrc.json` `importOrder`. See, https://github.com/trivago/prettier-plugin-sort-imports.
+- Strong use of SWC for local development and testing for speedy compilation. See, https://github.com/swc-project/swc-node.
 
 ## Dependencies
 
