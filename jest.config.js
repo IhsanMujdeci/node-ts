@@ -1,10 +1,7 @@
-require('./env.load');
-
 module.exports = {
   transform: {
-    '^.+\\.(t|j)sx?$': '@swc/jest',
+    '^.+\\.(t|j)sx?$': '@swc-node/jest',
   },
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['build'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };
