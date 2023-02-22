@@ -1,7 +1,7 @@
 {
   "name": "node-ts",
   "version": "1.0.0",
-  "description": "A simple starter for ts with node",
+  "description": "DMG Node TS Starter",
   "main": "index.js",
   "scripts": {
     "start": "node build/src/index.js",
