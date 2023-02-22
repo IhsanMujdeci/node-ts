@@ -6,6 +6,6 @@ export function add(a: number, b: number) {
 }
 
 print();
-console.log(add(1, 'a'));
+console.log(add(1, 1));
 
 console.log('MY CONFIG', config);
