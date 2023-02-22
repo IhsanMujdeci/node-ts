@@ -17,7 +17,9 @@
       }
     ],
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "incremental": true,
+    "assumeChangesOnlyAffectDirectDependencies": true
   },
   "ts-node": {
     "swc": true
