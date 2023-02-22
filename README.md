@@ -9,7 +9,7 @@ Node Typescript starter with testing
 - Husky runs prettier on commit, type checking on push.
 - Prettier sorts imports on top of the file by import name, config can be found in `.prettierrc.json` `importOrder`. See, https://github.com/trivago/prettier-plugin-sort-imports.
 - Strong use of swc-node for local development and testing for speedy compilation. See, https://github.com/swc-project/swc-node.
-- Testing built in with jest and swc-node
+- Testing built in with jest and swc-node/jest
 
 ## Dependencies
 
