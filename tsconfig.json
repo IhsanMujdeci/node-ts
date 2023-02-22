@@ -3,7 +3,7 @@
     "target": "es2018",
     "module": "commonjs",
     "outDir": "./build",
-    "rootDir": "./src",
+    "rootDir": ".",
     "strict": true,
     "baseUrl": ".",
     "paths": {
@@ -15,11 +15,13 @@
         "transform": "@zerollup/ts-transform-paths",
         "exclude": ["*"]
       }
-    ]
+    ],
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   },
   "ts-node": {
     "swc": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "config/*.json"],
   "exclude": ["node_modules"]
 }
