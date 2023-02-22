@@ -5,7 +5,7 @@ Node Typescript starter with testing
 ## Features
 
 - Includes config folder in build.
-- Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`.
+- Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`. You can make an alias for any path and folder as you wish. Handy for avoiding `../../../` syntax.
 - Husky runs prettier on commit, type checking on push.
 - Prettier sorts imports on top of the file by import name, config can ba found in `.prettierrc.json` `importOrder`. See, https://github.com/trivago/prettier-plugin-sort-imports.
 - Strong use of swc-node for local development and testing for speedy compilation. See, https://github.com/swc-project/swc-node.
