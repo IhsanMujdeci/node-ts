@@ -21,9 +21,6 @@
     "incremental": true,
     "assumeChangesOnlyAffectDirectDependencies": true
   },
-  "ts-node": {
-    "swc": true
-  },
   "include": ["src/**/*", "config/*.json"],
   "exclude": ["node_modules"]
 }
