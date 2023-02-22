@@ -9,7 +9,7 @@
     "build": "ttsc --build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "check:types": "tsc --noEmit --skipLibCheck",
+    "check:types": "tsc --noEmit --skipLibCheck --incremental --assumeChangesOnlyAffectDirectDependencies",
     "prepare": "husky install",
     "prettier": "pretty-quick --staged"
   },
