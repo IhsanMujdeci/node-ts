@@ -1,26 +1,23 @@
 {
+  "display": "Node 18",
   "compilerOptions": {
-    "target": "es2018",
+    "lib": ["es2022"],
     "module": "commonjs",
-    "outDir": "./build",
-    "rootDir": ".",
+    "target": "es2022",
     "strict": true,
-    "baseUrl": ".",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "incremental": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "outDir": "./build",
+    "rootDir": "src",
+    "baseUrl": "src",
     "paths": {
       "@app/*": ["src/*"]
-    },
-    "skipLibCheck": true,
-    "plugins": [
-      {
-        "transform": "@zerollup/ts-transform-paths",
-        "exclude": ["*"]
-      }
-    ],
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "incremental": true,
-    "assumeChangesOnlyAffectDirectDependencies": true
+    }
   },
-  "include": ["src/**/*", "config/*.json"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
