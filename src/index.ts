@@ -1,9 +1,8 @@
-import { print } from '@app/imported';
-import config from 'config';
+import { printEnv } from '@app/imported';
 
 export function add(a: number, b: number) {
   return a + b;
 }
 
-print();
+printEnv();
 console.log(add(1, 1));

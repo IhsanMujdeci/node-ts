@@ -5,3 +5,9 @@ describe('Index test', () => {
     expect(add(1, 1)).toEqual(2);
   });
 });
+
+describe('Environment test', () => {
+  it('Should be get test env variable', () => {
+    expect(process.env.HELLO).toEqual('test');
+  });
+});

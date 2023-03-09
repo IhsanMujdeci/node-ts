@@ -1,3 +1,3 @@
-export function print() {
-  console.log('hello world');
+export function printEnv() {
+  console.log(process.env.HELLO);
 }
