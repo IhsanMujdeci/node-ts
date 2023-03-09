@@ -1,14 +1,6 @@
 {
-  "display": "Node 18",
+  "extends": "@tsconfig/node12/tsconfig.json",
   "compilerOptions": {
-    "lib": ["esnext"],
-    "module": "commonjs",
-    "target": "esnext",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
     "incremental": true,
     "assumeChangesOnlyAffectDirectDependencies": true,
     "outDir": "./build",
