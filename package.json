@@ -4,9 +4,9 @@
   "description": "DMG Node TS Starter",
   "main": "index.js",
   "scripts": {
-    "start": "node build/src/index.js",
+    "start": "node build/index.js",
     "start:dev": "nodemon --exec 'node -r @swc-node/register' -r dotenv/config ./src/index.ts",
-    "build": "npm run check:types && tswc -- src -d build/src",
+    "build": "npm run check:types && tswc -- src -d build",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "check:types": "tsc --noEmit --diagnostics",
