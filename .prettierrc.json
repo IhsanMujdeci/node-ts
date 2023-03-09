@@ -3,6 +3,6 @@
   "trailingComma": "all",
   "arrowParens": "avoid",
   "printWidth": 100,
-  "importOrder": ["^[./]"],
+  "importOrder": ["^@"],
   "importOrderSeparation": true
 }

@@ -1,5 +1,3 @@
-const hello = process.env.HELLO;
-
-export function print() {
-  console.log(hello);
+export function printEnv() {
+  console.log(process.env.HELLO);
 }

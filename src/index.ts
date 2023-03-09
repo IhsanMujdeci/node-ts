@@ -1,8 +1,8 @@
-import { print } from '@app/imported';
+import { printEnv } from '@app/imported';
 
 export function add(a: number, b: number) {
   return a + b;
 }
 
-print();
-console.log(add(1, 2));
+printEnv();
+console.log(add(1, 1));

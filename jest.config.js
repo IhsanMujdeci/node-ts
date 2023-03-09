@@ -1,13 +1,10 @@
-const { pathsToModuleNameMapper } = require('ts-jest/utils');
-const { compilerOptions } = require('./tsconfig.json');
-require('./env.load');
+require('dotenv').config({ path: '.test.env' });
 
 module.exports = {
-  preset: 'ts-jest',
+  transform: {
+    '^.+\\.(t|j)sx?$': '@swc-node/jest',
+  },
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['build'],
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/',
-  }),
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
+  setupFiles: ['tsconfig-paths/register'],
 };

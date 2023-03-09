@@ -1,10 +1,18 @@
 {
+  "display": "Node 18",
   "compilerOptions": {
-    "target": "es5",
+    "lib": ["esnext"],
     "module": "commonjs",
-    "outDir": "./build",
-    "rootDir": "./src",
+    "target": "esnext",
     "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "incremental": true,
+    "assumeChangesOnlyAffectDirectDependencies": true,
+    "outDir": "./build",
+    "rootDir": "src",
     "baseUrl": ".",
     "paths": {
       "@app/*": ["src/*"]

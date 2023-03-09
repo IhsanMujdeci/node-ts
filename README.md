@@ -4,38 +4,46 @@ Node Typescript starter with testing
 
 ## Features
 
-- Dev mode transpiling ts with nodemon like re-running.
-- Testing built in with jest.
-- Github actions on push and pr to master that build and test the application
-- Environment variable loading from file built in.
-- Aliases your project under @myApp, you can change it the tsconfig.json
-- Husky runs prettier on commit
-- bin folder contains cli tool to start server application when implemented
+- Includes config folder in build.
+- Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`. You can make an alias for any path and folder as you wish. Handy for avoiding `../../../` syntax.
+- Husky runs prettier on commit, type checking on push.
+- Prettier sorts imports on top of the file by import name, config can be found in `.prettierrc.json` `importOrder`. See, https://github.com/trivago/prettier-plugin-sort-imports.
+- Strong use of swc-node for local development and testing for speedy compilation. See, https://github.com/swc-project/swc-node.
+- Testing built in with jest and swc-node/jest
 
 ## Dependencies
 
-Node version at least latest 14
+Node version at least latest 12
 
-## How to use
+## How to use for development
 
 `npm install`  
 `npm run prepare`  
-`npm start:dev`
+`npm run start:dev`
+
+## How to use for deployment
+
+`npm run build`  
+`npm start`
 
 ## Commands
 
-### npm run start:dev
+### npm run build
 
-Load environment variables from `.env` and build ts code, watch for code changes and rebuilds ts to js and respawns node.
+Builds the application from ts into js
+
+### npm run start
+
+Starts the built js application with node
+
+### npm start:dev
+
+Starts the application with swc-node and without any build steps or type checking
 
 ### npm test
 
-Runs test with ts-jest
+Runs test with swc-node/jest
 
 ### npm run test:watch
 
-Runs test with ts-jest watch interactive command
-
-### npm run build
-
-Build ts `./src` into js `./build` folder
+Runs test in watch interactive mode
