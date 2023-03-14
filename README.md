@@ -1,6 +1,6 @@
 # Node Typescript Starter
 
-Node Typescript starter with testing
+Node Typescript swc starter with testing
 
 ## Features
 
@@ -26,27 +26,28 @@ Node
 
 Note: This assumes you have environment variables included in your machine
 
-`npm run build`
+`npm run build`  
 `npm start`
 
 ## Commands
 
-### npm run build
-
+`npm run build`  
 Builds the application from ts into js
 
-### npm run start
-
+`npm run start`  
 Starts the built js application with node. This assumes you have environment variables included in your machine
 
-### npm start:dev
-
+`npm run start:dev`  
 Starts the application with swc-node and without any build steps or type checking
 
-### npm test
-
+`npm test`  
 Runs test with swc-node/jest
 
-### npm run test:watch
-
+`npm run test:watch`  
 Runs test in watch interactive mode
+
+`npm run prettier`  
+Runs prettier on staged git files
+
+`npm run prettier:all`  
+Runs prettier on all files
