@@ -11,7 +11,8 @@
     "test:watch": "npm test -- --watch",
     "check:types": "tsc --noEmit --diagnostics",
     "prepare": "husky install",
-    "prettier": "pretty-quick --staged"
+    "prettier": "pretty-quick --staged",
+    "prettier:all": "prettier --write ."
   },
   "author": "Ihsan Mujdeci",
   "license": "ISC",
