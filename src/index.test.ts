@@ -8,6 +8,6 @@ describe('Index test', () => {
 
 describe('Environment test', () => {
   it('Should be get test env variable', () => {
-    expect(process.env.HELLO).toEqual('test');
+    expect(process.env['HELLO']).toEqual('test');
   });
 });
