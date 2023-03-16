@@ -1,8 +1,8 @@
 FROM node:18-alpine
 
 COPY ["package.json", "package-lock.json*", "./"]
-COPY "build" "./"
+COPY "build" "./build"
 
 RUN npm install --production --ignore-scripts
 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
