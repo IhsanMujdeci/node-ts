@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:18-alpineh@rdstyleklan
 
 COPY ["package.json", "package-lock.json*", "./"]
 COPY "build" "./build"
