@@ -7,7 +7,7 @@
     "start": "node build/index.js",
     "start:dev": "nodemon --exec 'node -r @swc-node/register' -r dotenv/config ./src/index.ts",
     "build": "npm run check:types && tswc -- src -d build",
-    "test": "jest",
+    "test": "jest && node scripts/printCoverageHtml.js",
     "test:watch": "npm test -- --watch",
     "types:check": "tsc --noEmit --diagnostics",
     "types:watch": "tsc --noEmit -w",
