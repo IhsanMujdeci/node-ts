@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Node TS Starter",
   "main": "index.js",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "src"
+    ]
+  },
   "scripts": {
     "start": "node build/index.js",
     "start:dev": "nodemon --exec 'node -r @swc-node/register' -r dotenv/config ./src/index.ts",
@@ -10,11 +15,10 @@
     "test": "jest && npm run --silent print:converageLink",
     "test:watch": "jest --watch",
     "types:check": "tsc --noEmit --diagnostics",
-    "types:watch": "tsc --noEmit -w",
-    "prepare": "husky install",
+    "prepare": "test -d node_modules/husky && husky install || echo \"Husky is not installed\"",
     "prettier": "pretty-quick --staged",
     "prettier:all": "prettier --write .",
-    "script": "node -r @swc-node/register",
+    "script": "SWC_NODE_PROJECT=./scripts/tsconfig.json node -r @swc-node/register",
     "print:converageLink": "npm run --silent script -- scripts/printCoverageHtml.ts "
   },
   "author": "Ihsan Mujdeci",
