@@ -1,8 +1,7 @@
 {
   "extends": "@tsconfig/node18-strictest/tsconfig.json",
   "compilerOptions": {
-    "incremental": true,
-    "assumeChangesOnlyAffectDirectDependencies": true,
+    "esModuleInterop": true,
     "outDir": "./build",
     "rootDir": "./src",
     "baseUrl": "./src",
@@ -10,6 +9,6 @@
       "@app/*": ["./*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["/**/*"],
   "exclude": ["node_modules"]
 }

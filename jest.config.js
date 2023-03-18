@@ -5,7 +5,7 @@ module.exports = {
     '.ts$': '@swc-node/jest',
   },
   collectCoverage: true,
-  coverageReporters: ['html', 'text'],
+  coverageReporters: ['text', 'html'],
   roots: ['src'],
   testEnvironment: 'node',
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],

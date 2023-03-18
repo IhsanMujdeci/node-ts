@@ -4,6 +4,7 @@ Node Typescript swc starter with testing
 
 ## Features
 
+- Dockerfile to build image
 - .env file support built in. Uses .env for dev and .test.env for test
 - Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`. You can make an alias for any path and folder as you wish. Handy for avoiding `../../../` syntax.
 - Husky runs prettier on commit, type checking on push.

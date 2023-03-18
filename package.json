@@ -7,13 +7,15 @@
     "start": "node build/index.js",
     "start:dev": "nodemon --exec 'node -r @swc-node/register' -r dotenv/config ./src/index.ts",
     "build": "npm run check:types && tswc -- src -d build",
-    "test": "jest && node scripts/printCoverageHtml.js",
-    "test:watch": "npm test -- --watch",
+    "test": "jest && npm run --silent print:converageLink",
+    "test:watch": "jest --watch",
     "types:check": "tsc --noEmit --diagnostics",
     "types:watch": "tsc --noEmit -w",
     "prepare": "husky install",
     "prettier": "pretty-quick --staged",
-    "prettier:all": "prettier --write ."
+    "prettier:all": "prettier --write .",
+    "script": "node -r @swc-node/register",
+    "print:converageLink": "npm run --silent script -- scripts/printCoverageHtml.ts "
   },
   "author": "Ihsan Mujdeci",
   "license": "ISC",
