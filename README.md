@@ -4,18 +4,21 @@ Node Typescript swc starter with testing
 
 ## Features
 
-- Dockerfile to build image
 - .env file support built in. Uses .env for dev and .test.env for test
 - Aliases your project under @myApp, you can change it and add more it the `tsconfig.json` `compilerOptions.paths`. You can make an alias for any path and folder as you wish. Handy for avoiding `../../../` syntax.
 - Husky runs prettier on commit, type checking on push.
-- Prettier sorts imports on top of the file by import name, config can be found in `.prettierrc.json` `importOrder`. See, https://github.com/trivago/prettier-plugin-sort-imports.
-  - The included config places npm level imports at the top followed by imports starting with an "@" and then all other imports.
+- Prettier sorts imports on top of the file by import name, config can be found in `.prettier.config.js` `importOrder`.See, https://github.com/trivago/prettier-plugin-sort-imports.
+- The included config places npm level imports at the top followed by imports starting with an "@" and then all other imports.
+- The included config places npm level imports at the top followed by imports starting with an "@" and then all other imports.
+- Uses a tsconfig.json but runs swc via the use of "tswc".
 - Strong use of swc-node for local development and testing for speedy compilation. See, https://github.com/swc-project/swc-node.
 - Testing built in with jest and swc-node/jest
+- Dockerfile to build image
 
 ## Dependencies
 
-Node
+- Node 18
+- Docker (if you want to build a docker image)
 
 ## How to use for development
 
