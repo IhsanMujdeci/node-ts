@@ -23,7 +23,6 @@ Node Typescript swc starter with testing
 ## How to use for development
 
 `npm install`  
-`npm run prepare`  
 `npm run start:dev`
 
 ## How to use for deployment
@@ -32,6 +31,15 @@ Note: This assumes you have environment variables included in your machine
 
 `npm run build`  
 `npm start`
+
+## Docker
+
+A docker file is included for CI image purposes.  
+Example usage
+
+- `docker build --tag node-ts`
+- Look at image built `docker images`. It will have the tag defined above "node-ts"
+- Run with env file `docker run --env-file .env node-ts`
 
 ## Commands
 
