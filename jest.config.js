@@ -8,6 +8,5 @@ module.exports = {
   coverageReporters: ['text', 'html'],
   roots: ['src'],
   testEnvironment: 'node',
-  modulePathIgnorePatterns: ['scripts'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };
