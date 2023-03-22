@@ -1,8 +1,13 @@
 // Get all paths from compilerOptions.paths and format them in a regex that targets any imports starting with them
 function regexPathsFromTsConfig(tsConfigPath) {
-  const stripCommentsRegex = /\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g;
   let rawConfig = require('fs').readFileSync(tsConfigPath, { encoding: 'utf8' });
-  let strippedConfig = rawConfig.replace(stripCommentsRegex, (m, g) => (g ? '' : m));
+
+  const stripTrailingComma = /,(?!\s*?[{\["'\w])/g;
+  const stripCommentsRegex = /\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g;
+  let strippedConfig = rawConfig
+    .replace(stripCommentsRegex, (m, g) => (g ? '' : m))
+    .replace(stripTrailingComma, (m, g) => (g ? '' : m));
+
   let config = JSON.parse(strippedConfig);
   const regexKeys = Object.keys(config.compilerOptions.paths)
     .map(k => k.replace('*', ''))
