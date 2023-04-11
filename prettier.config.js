@@ -2,8 +2,10 @@
 function regexPathsFromTsConfig(tsConfigPath) {
   let rawConfig = require('fs').readFileSync(tsConfigPath, { encoding: 'utf8' });
 
-  const stripTrailingComma = /,(?!\s*?[{\["'\w])/g;
+  // Replace trailing commas and stripped comments
   const stripCommentsRegex = /\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g;
+  const stripTrailingComma = /,(?!\s*?[{\["'\w])/g;
+
   let strippedConfig = rawConfig
     .replace(stripCommentsRegex, (m, g) => (g ? '' : m))
     .replace(stripTrailingComma, (m, g) => (g ? '' : m));
