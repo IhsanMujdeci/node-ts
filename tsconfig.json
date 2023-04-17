@@ -8,6 +8,7 @@
     "paths": {
       "@app/*": ["./*"]
     },
+    "importsNotUsedAsValues": "remove",
     "incremental": true,
     "assumeChangesOnlyAffectDirectDependencies": true
   },
