@@ -1,8 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo "💅 Running prettier"
-npm run --silent prettier
-echo
 echo "🧹 Running eslint"
 npm run --silent lint
+echo
+echo "💅 Running prettier"
+npm run --silent prettier
