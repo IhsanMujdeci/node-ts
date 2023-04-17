@@ -8,7 +8,8 @@
     "paths": {
       "@app/*": ["./*"]
     },
-    "importsNotUsedAsValues": "remove"
+    "incremental": true,
+    "assumeChangesOnlyAffectDirectDependencies": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
