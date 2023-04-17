@@ -1,38 +1,26 @@
-// Get all paths from compilerOptions.paths and format them in a regex that targets any imports starting with them
+const fs = require('fs');
+
+/**
+ * Get paths from tsconfig.json and add them in the import order
+ * Output will look like ^(@app/|@log/)
+ *
+ * @param {string }tsConfigPath
+ * @return {string}
+ */
 function regexPathsFromTsConfig(tsConfigPath) {
-  let rawConfig = require('fs').readFileSync(tsConfigPath, { encoding: 'utf8' });
-
-  // Replace trailing commas and stripped comments
-  const stripCommentsRegex = /\\"|"(?:\\"|[^"])*"|(\/\/.*|\/\*[\s\S]*?\*\/)/g;
-  const stripTrailingComma = /,(?!\s*?[{\["'\w])/g;
-
-  let strippedConfig = rawConfig
-    .replace(stripCommentsRegex, (m, g) => (g ? '' : m))
-    .replace(stripTrailingComma, (m, g) => (g ? '' : m));
-
-  let config = JSON.parse(strippedConfig);
-  if (!config.compilerOptions || !config.compilerOptions.paths) {
-    return null;
-  }
-  const regexKeys = Object.keys(config.compilerOptions.paths)
-    .map(k => k.replace('*', ''))
-    .join('|');
-  return '^(' + regexKeys + ')';
+  let config = fs.readFileSync(tsConfigPath, { encoding: 'utf8' });
+  // get all strings that start with @ followed by any characters and followed by *":
+  return '^(' + config.match(/@.+(?=\*":)/g).join('|') + ')';
 }
 
-const importOrder = [];
-const pathRegex = regexPathsFromTsConfig('./tsconfig.json');
-if (pathRegex) {
-  const relativeImportsRegex = '^\\.{1,2}';
-  importOrder.push(pathRegex, relativeImportsRegex);
-}
+const relativeImportsRegex = '^\\.{1,2}';
 
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   arrowParens: 'avoid',
   printWidth: 100,
-  importOrder: importOrder,
+  importOrder: [regexPathsFromTsConfig('./tsconfig.json'), relativeImportsRegex],
   importOrderSortSpecifiers: true,
   importOrderSeparation: true,
 };
