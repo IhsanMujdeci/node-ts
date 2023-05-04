@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
+const { updatePackageJsonEngines, getNodeTypesVersion } = require('./nodeEngine');
 
 const [_, filePath, nodeVersion] = process.argv;
 
@@ -17,7 +18,7 @@ let matchNodeBase = config.match(/@tsconfig\/node\d+/);
 let existingNodeBase = matchNodeBase && matchNodeBase[0];
 // Insert string for new node config extends in config
 if (existingNodeBase) {
-  config = config.replace(/^.*"extends": .*$/gm, extendsKeyValue);
+  config = config.replace(/^.*"extends": .*$/m, extendsKeyValue);
 } else {
   // match first new line after open curly brace
   const match = config.match(/(?<={\n)/);
@@ -39,6 +40,12 @@ if (existingNodeBase) {
     const types = '@types/node@' + nodeVersion;
     console.log('Installing', types);
     await execPromise('npm i --save-dev ' + types);
+
+    console.log('Updating package.json engines');
+    updatePackageJsonEngines(projectRoot, getNodeTypesVersion());
+
+    console.log('Updating .nvmrc');
+    await execPromise('echo ' + nodeVersion + ' > .nvmrc');
 
     if (existingNodeBase && newNodeBase !== existingNodeBase) {
       console.log('Uninstalling', existingNodeBase);
