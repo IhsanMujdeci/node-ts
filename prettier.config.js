@@ -4,24 +4,33 @@ const fs = require('fs');
  * Get paths from tsconfig.json and add them in the import order
  * Output will look like ^(@app/|@log/)
  *
- * @param {string }tsConfigPath
- * @return {string}
+ * @param {string} tsConfigPath
+ * @return {string | null}
  */
 function regexPathsFromTsConfig(tsConfigPath) {
   let config = fs.readFileSync(tsConfigPath, { encoding: 'utf8' });
+  const match = config.match(/@.+(?=\*":)/g);
+  if (!match) {
+    return null;
+  }
   // get all strings that start with @ followed by any characters and before *": characters
-  // This might not catch things are config gets more complicated
-  return '^(' + config.match(/@.+(?=\*":)/g).join('|') + ')';
+  return `^(${match.join('|')})`;
+}
+const relativeImportsRegex = '^\\.{1,2}';
+const importOrder = [relativeImportsRegex];
+const tsConfigPathRegex = regexPathsFromTsConfig('./tsconfig.json');
+if (tsConfigPathRegex) {
+  importOrder.unshift(tsConfigPathRegex);
 }
 
-const relativeImportsRegex = '^\\.{1,2}';
+console.log(importOrder);
 
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
   arrowParens: 'avoid',
   printWidth: 100,
-  importOrder: [regexPathsFromTsConfig('./tsconfig.json'), relativeImportsRegex],
+  importOrder,
   importOrderSortSpecifiers: true,
   importOrderSeparation: true,
 };
