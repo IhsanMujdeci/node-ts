@@ -23,6 +23,7 @@ module.exports = {
   plugins: ['unused-imports', '@typescript-eslint', 'sonarjs'],
   rules: {
     // Turned off by then reapplied using "unused-imports" plugin.
+    // This allows eslint to auto remove unused imports
     '@typescript-eslint/no-unused-vars': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [

@@ -7,7 +7,7 @@ module.exports = {
   collectCoverage: true,
   clearMocks: true,
   coverageReporters: ['text', 'html'],
-  roots: ['src'],
+  rootDir: 'src',
   testEnvironment: 'node',
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
 };

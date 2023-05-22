@@ -10,12 +10,11 @@ const fs = require('fs');
 function regexPathsFromTsConfig(tsConfigPath) {
   let config = fs.readFileSync(tsConfigPath, { encoding: 'utf8' });
   // get all strings that start with @ followed by any characters and before *": characters
-
+  // will still detect commented lines
   const match = config.match(/@.+(?=\*":)/g);
   if (!match) {
     return null;
   }
-  // get all strings that start with @ followed by any characters and before *": characters
   return `^(${match.join('|')})`;
 }
 const relativeImportsRegex = '^\\.{1,2}';
@@ -24,8 +23,6 @@ const tsConfigPathRegex = regexPathsFromTsConfig('./tsconfig.json');
 if (tsConfigPathRegex) {
   importOrder.unshift(tsConfigPathRegex);
 }
-
-console.log(importOrder);
 
 module.exports = {
   singleQuote: true,
