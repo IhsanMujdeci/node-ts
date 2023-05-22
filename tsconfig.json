@@ -5,9 +5,9 @@
     "outDir": "./build",
     "rootDir": "./src",
     "baseUrl": "./src",
-    "paths": {
-      "@app/*": ["./*"]
-    },
+    //    "paths": {
+    //      "@app/*": ["./*"]
+    //    },
     "importsNotUsedAsValues": "remove",
     "incremental": true,
     "assumeChangesOnlyAffectDirectDependencies": true
