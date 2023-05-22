@@ -9,6 +9,8 @@ const fs = require('fs');
  */
 function regexPathsFromTsConfig(tsConfigPath) {
   let config = fs.readFileSync(tsConfigPath, { encoding: 'utf8' });
+  // get all strings that start with @ followed by any characters and before *": characters
+
   const match = config.match(/@.+(?=\*":)/g);
   if (!match) {
     return null;
