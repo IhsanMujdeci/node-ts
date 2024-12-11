@@ -2,7 +2,7 @@ require('dotenv').config({ path: '.test.env' });
 
 module.exports = {
   transform: {
-    '.ts$': '@swc-node/jest',
+    '^.+\\.(t|j)sx?$': ['@swc-node/jest'],
   },
   collectCoverage: true,
   clearMocks: true,
